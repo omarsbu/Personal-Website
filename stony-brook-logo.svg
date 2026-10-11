@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 911 766" role="img" aria-labelledby="title desc">
+  <title id="title">Stony Brook University</title>
+  <desc id="desc">Stony Brook University wordmark</desc>
+  <path d="M312 37Q456-27 615 37v143q0 145-159 182Q312 325 312 180Z" fill="#a51c30"/>
+  <path d="M463 0h12v360q-6 2-12 2Z" fill="#fff"/>
+  <path d="M490 0h13l31 328q-7 4-14 7Z" fill="#fff"/>
+  <path d="M526 0h14l54 298q-7 7-15 12Z" fill="#fff"/>
+  <path d="M565 0h15l75 254q-8 11-17 20Z" fill="#fff"/>
+  <path d="m392 127 12 37h39l-32 23 12 37-31-23-32 23 12-37-31-23h39Z" fill="#fff"/>
+  <text x="455" y="530" fill="#111" font-family="Georgia, serif" font-size="126" text-anchor="middle">Stony Brook</text>
+  <text x="455" y="680" fill="#a51c30" font-family="Georgia, serif" font-size="128" text-anchor="middle">University</text>
+</svg>
