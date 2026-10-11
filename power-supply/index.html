@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omar Kalea | 75 Watt Programmable Benchtop Power Supply</title>
+    <link rel="icon" type="image/svg+xml" href="../transistor-favicon.svg" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      body {
+        background: #f3f7fb;
+      }
+
+      .project-hero {
+        background: #0f172a;
+        color: #e2f3ff;
+        padding: 2.5rem 0 1rem;
+        border-bottom: 1px solid rgba(191, 208, 223, 0.25);
+      }
+
+      .project-hero .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+
+      .project-hero h1 {
+        margin: 0;
+        max-width: 52rem;
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        line-height: 1.15;
+      }
+
+      .project-hero .hero-actions {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        margin: 0;
+        white-space: nowrap;
+      }
+
+      .project-page {
+        color: #12345b;
+        background: #f3f7fb;
+      }
+
+      .project-page .section {
+        background: #f3f7fb;
+      }
+
+      .project-page a,
+      .project-page a:hover,
+      .project-page a:focus-visible {
+        color: #7c3aed;
+      }
+
+      .project-page p,
+      .project-page li {
+        color: #12345b;
+        line-height: 1.4;
+      }
+
+      .project-page .section-header {
+        margin-bottom: 1rem;
+      }
+
+      .diagram-wrap {
+        padding: 1rem;
+        border: 1px solid #bfd0df;
+        border-radius: 18px;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .diagram-clickable {
+        display: block;
+        width: 100%;
+        max-width: 1100px;
+        max-height: 65vh;
+        min-height: 18rem;
+        margin: 0 auto;
+        object-fit: contain;
+        border: 1px solid #d8e1ea;
+        background: #fff;
+        cursor: zoom-in;
+      }
+
+      .zoom-modal {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: rgba(15, 23, 42, 0.8);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        z-index: 2000;
+      }
+
+      .zoom-modal.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .zoom-modal img,
+      .zoom-modal object {
+        max-width: min(96vw, 1600px);
+        max-height: 95vh;
+        border-radius: 12px;
+        border: 1px solid #d8e1ea;
+        background: #fff;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      }
+
+      .zoom-modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: none;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #12345b;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .pdf-preview-card {
+        display: block;
+        width: min(100%, 1100px);
+        margin: 0.75rem auto 0;
+        min-height: 72px;
+        padding: 0.75rem 1rem;
+        border: 1px solid #bfd0df;
+        border-radius: 12px;
+        background: #f4f8fc;
+        color: #12345b;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .pdf-preview-card:hover {
+        background: #edf4fb;
+      }
+
+      .pdf-modal {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: rgba(15, 23, 42, 0.8);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        z-index: 2000;
+      }
+
+      .pdf-modal.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .pdf-modal iframe {
+        width: min(90vw, 1100px);
+        height: 85vh;
+        border: none;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      }
+
+      .project-page ul {
+        margin: 0.5rem 0 0;
+        padding-left: 1.2rem;
+      }
+
+      .project-page li + li {
+        margin-top: 0.35rem;
+      }
+
+      @media (max-width: 800px) {
+        .project-hero .container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="container nav-inner">
+        <a class="nav-brand" href="../index.html" aria-label="Return to homepage">Omar Kalea</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#education">Education</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../resume.html" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+        <div class="nav-social" aria-label="Social links">
+          <a href="https://github.com/omarsbu" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 .7a11.3 11.3 0 0 0-3.6 22c.57.1.78-.25.78-.55v-2.13c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.54-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.12 1.17a10.8 10.8 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.36.77 1.08.77 2.18v3.23c0 .3.2.66.79.55A11.3 11.3 0 0 0 12 .7Z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/omar-mohamed123/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 448 512" aria-hidden="true">
+              <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="project-hero">
+      <div class="container">
+        <h1>75 Watt Programmable Benchtop Power Supply</h1>
+        <div class="hero-actions">
+          <a class="button" href="../index.html#projects">Back to Portfolio</a>
+          <a class="button button-secondary" href="https://github.com/omarsbu/75-Watt-Programmable-Benchtop-Power-Supply" target="_blank" rel="noreferrer">View Source</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="project-page">
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>System Architecture</h2>
+          </div>
+          <div class="diagram-wrap">
+            <img
+              class="diagram-clickable"
+              src="power_supply_architecture.png"
+              alt="Programmable benchtop power supply system architecture"
+              role="button"
+              tabindex="0"
+              aria-label="Enlarge power supply system architecture"
+            />
+          </div>
+          <div class="zoom-modal" id="designModal" role="dialog" aria-modal="true" aria-label="Enlarged power supply system architecture" aria-hidden="true">
+            <button class="zoom-modal-close" type="button" aria-label="Close enlarged image">×</button>
+            <img src="power_supply_architecture.png" alt="Expanded programmable benchtop power supply system architecture" />
+          </div>
+          <div style="margin-top: 1.5rem; background: transparent; border: none; box-shadow: none; padding: 0;">
+            <p style="margin-bottom: 0.35rem; font-size: 1.45rem; font-weight: 700;"><u>Source Files:</u></p>
+            <ul style="margin-top: 0; font-size: 1.1rem; line-height: 1.2;">
+              <li><a href="https://github.com/omarsbu/75-Watt-Programmable-Benchtop-Power-Supply/blob/main/programmable_benctop_power_supply_schematic.pdf" target="_blank" rel="noreferrer">Schematic and PCB Layout</a></li>
+              <li><a href="https://github.com/omarsbu/75-Watt-Programmable-Benchtop-Power-Supply/tree/main/LTspice" target="_blank" rel="noreferrer">LTspice Simulations</a></li>
+              <li><a href="https://github.com/omarsbu/75-Watt-Programmable-Benchtop-Power-Supply/tree/main/Software" target="_blank" rel="noreferrer">Software</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Project Overview</h2>
+          </div>
+          <p>I designed a programmable benchtop power supply with a 0–24 V output and a 0–3 A current limit. I divided the design into separate power and controller modules. The power module combines a synchronous buck converter, preregulator, and parallel linear regulators, with diode-based feedback for automatic constant-voltage and constant-current operation. I used an STM32 microcontroller and DAC to control the output voltage and current limit. An on-board status LCD reports back the measured output voltage and current while a USB-to-UART bridge is used to interface with a remote PC GUI for a more flexible user interface.</p>
+          <div class="diagram-wrap" style="margin-top: 1.5rem;">
+            <img
+              class="diagram-clickable board-clickable"
+              src="power_supply_board.png"
+              alt="Programmable benchtop power supply PCB overview"
+              role="button"
+              tabindex="0"
+              aria-label="Enlarge power supply PCB overview"
+            />
+          </div>
+          <div class="zoom-modal" id="boardModal" role="dialog" aria-modal="true" aria-label="Enlarged power supply PCB overview" aria-hidden="true">
+            <button class="zoom-modal-close" type="button" aria-label="Close enlarged image">×</button>
+            <img src="power_supply_board.png" alt="Expanded programmable benchtop power supply PCB overview" />
+          </div>
+          <button class="pdf-preview-card" type="button" data-modal-target="schematicPdfModal">Open Schematic PDF</button>
+          <div class="pdf-modal" id="schematicPdfModal" aria-hidden="true">
+            <button class="zoom-modal-close" type="button" aria-label="Close PDF preview">×</button>
+            <iframe src="power_supply_schematic.pdf" title="Power supply schematic preview"></iframe>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 Omar Kalea</p>
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://github.com/omarsbu" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 .7a11.3 11.3 0 0 0-3.6 22c.57.1.78-.25.78-.55v-2.13c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.54-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.12 1.17a10.8 10.8 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.36.77 1.08.77 2.18v3.23c0 .3.2.66.79.55A11.3 11.3 0 0 0 12 .7Z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/omar-mohamed123/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 448 512" aria-hidden="true">
+              <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+      const designModal = document.getElementById('designModal');
+      const boardModal = document.getElementById('boardModal');
+      const schematicPdfModal = document.getElementById('schematicPdfModal');
+      const designTrigger = document.querySelector('.diagram-clickable');
+      const boardTrigger = document.querySelector('.board-clickable');
+      const schematicButton = document.querySelector('[data-modal-target="schematicPdfModal"]');
+      const designCloseButton = designModal ? designModal.querySelector('.zoom-modal-close') : null;
+      const boardCloseButton = boardModal ? boardModal.querySelector('.zoom-modal-close') : null;
+      const schematicCloseButton = schematicPdfModal ? schematicPdfModal.querySelector('.zoom-modal-close') : null;
+
+      function closeModal(modal) {
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      function openModal(modal) {
+        if (!modal) return;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      }
+
+      if (designTrigger && designModal) {
+        designTrigger.addEventListener('click', () => openModal(designModal));
+        designTrigger.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openModal(designModal);
+          }
+        });
+      }
+      if (designCloseButton && designModal) {
+        designCloseButton.addEventListener('click', () => closeModal(designModal));
+        designModal.addEventListener('click', (event) => {
+          if (event.target === designModal) {
+            closeModal(designModal);
+          }
+        });
+      }
+
+      if (boardTrigger && boardModal) {
+        boardTrigger.addEventListener('click', () => openModal(boardModal));
+        boardTrigger.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openModal(boardModal);
+          }
+        });
+      }
+      if (boardCloseButton && boardModal) {
+        boardCloseButton.addEventListener('click', () => closeModal(boardModal));
+        boardModal.addEventListener('click', (event) => {
+          if (event.target === boardModal) {
+            closeModal(boardModal);
+          }
+        });
+      }
+
+      if (schematicButton && schematicPdfModal) {
+        schematicButton.addEventListener('click', () => openModal(schematicPdfModal));
+      }
+      if (schematicCloseButton && schematicPdfModal) {
+        schematicCloseButton.addEventListener('click', () => closeModal(schematicPdfModal));
+        schematicPdfModal.addEventListener('click', (event) => {
+          if (event.target === schematicPdfModal) {
+            closeModal(schematicPdfModal);
+          }
+        });
+      }
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeModal(designModal);
+          closeModal(boardModal);
+          closeModal(schematicPdfModal);
+        }
+      });
+    </script>
+  </body>
+</html>
