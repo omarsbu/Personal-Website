@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omar Kalea | Resume</title>
+    <style>
+      :root { color: #172033; background: #f4f5f7; font-family: Arial, sans-serif; }
+      body { margin: 0; padding: 2rem 1rem; }
+      main { max-width: 800px; margin: 0 auto; padding: 2.5rem 3rem; background: #fff; }
+      h1 { margin: 0; font-size: 2rem; }
+      h2 { margin: 1.5rem 0 0.45rem; padding-bottom: 0.2rem; border-bottom: 1px solid #172033; font-size: 1rem; letter-spacing: 0.08em; }
+      h3 { margin: 0.8rem 0 0.1rem; font-size: 0.95rem; }
+      p { margin: 0.2rem 0; font-size: 0.84rem; line-height: 1.4; }
+      ul { margin: 0.25rem 0 0.6rem 1.2rem; padding: 0; }
+      li { margin: 0.18rem 0; font-size: 0.82rem; line-height: 1.35; }
+      .contact { margin-top: 0.3rem; color: #435066; font-size: 0.82rem; }
+      .entry-head { display: flex; justify-content: space-between; gap: 1rem; }
+      .entry-head p { text-align: right; white-space: nowrap; }
+      @media (max-width: 640px) { body { padding: 0; } main { padding: 1.5rem; } .entry-head { display: block; } .entry-head p { text-align: left; } }
+      @media print { body { padding: 0; background: #fff; } main { padding: 0; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Omar Kalea</h1>
+        <p class="contact">Nashua, NH | (929) 293-4875 | omtm25@gmail.com | linkedin.com/in/omar-mohamed123 | github.com/omarsbu</p>
+      </header>
+
+      <section>
+        <h2>EDUCATION</h2>
+        <div class="entry-head"><h3>Stony Brook University, Stony Brook, NY</h3><p>Graduation May 2025</p></div>
+        <p>Bachelor of Engineering, Electrical Engineering | Magna Cum Laude | GPA: 3.8/4.0</p>
+      </section>
+
+      <section>
+        <h2>SKILLS</h2>
+        <p><strong>Programming:</strong> C, Embedded C, C++, Python, AVR/MIPS Assembly, MATLAB, VHDL, Verilog</p>
+        <p><strong>Tools:</strong> Fusion360, OrCAD, LTspice, LTpowerCAD, Pspice, KiCad, Altium, Vivado, Cadence, Wireshark</p>
+        <p><strong>Lab:</strong> Oscilloscope, Signal Generator, Logic Analyzer, Spectrum Analyzer, Vector Network Analyzer, Multimeter</p>
+        <p><strong>Standards:</strong> UART, I2C, SPI, USB, PCIe, TCP/IP, Ethernet, BLE, JTAG, CAN, AXI-4, VGA, HDMI</p>
+      </section>
+
+      <section>
+        <h2>EXPERIENCE</h2>
+        <div class="entry-head"><h3>BAE Systems - Electronic Systems, Nashua, NH</h3><p>June 2025 - Present</p></div>
+        <h3>Electrical Engineer</h3>
+        <ul>
+          <li>Designed multiphase DC-to-DC converters with inductor DCR current sensing in LTpowerCAD and LTspice.</li>
+          <li>Designed a surge-stopper for over-voltage and overcurrent protection within FET safe-operating-area limits.</li>
+          <li>Designed a front-end driver for a differential ADC, including common-mode level shifting and anti-alias filtering.</li>
+          <li>Created test fixtures, procedures, datasheets, and reports for power supply and EMI filter verification.</li>
+          <li>Performed RF testing and calibration using signal generator, spectrum analyzer, and network analyzer.</li>
+          <li>Routed flex PCBs, created MATLAB scripts for RF signal processing, and modeled components in Excel for HyperLynx.</li>
+          <li>Maintained a SECRET security clearance for classified defense programs supporting national security.</li>
+        </ul>
+        <div class="entry-head"><h3>SRC, Syracuse, NY</h3><p>May 2024 - August 2024</p></div>
+        <h3>Electrical Engineering Intern</h3>
+        <ul>
+          <li>Implemented a PCIe-to-Ethernet bridge with evaluation boards and verified operation using Wireshark.</li>
+          <li>Performed power supply load testing, power tree sequencing, and LTpowerCAD simulations.</li>
+          <li>Configured jitter attenuators and clock fanout buffers to synchronize multiple PLL synthesizers deterministically.</li>
+          <li>Developed fan PWM firmware and tested an accelerometer, 100 MHz oscillator, and warning lights.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>PROJECTS</h2>
+        <h3>50-ohm 100 MHz Bandwidth Digital Storage Oscilloscope</h3>
+        <ul>
+          <li>Designed a 50-ohm, 100 MHz analog front end with protection, attenuation, single-ended to differential conversion, programmable gain, DC offsetting, and anti-alias filtering.</li>
+          <li>Designed a four-layer PCB with 50-ohm microstrip transmission lines and differential pair length matching.</li>
+          <li>Implemented LVDS deserialization, FIR/CIC filters, FFT, digital triggering, VGA, and arbitrated memory on a Xilinx FPGA using Vivado.</li>
+          <li>Created a MATLAB GUI for generating filter coefficients and simulating digital signal processing.</li>
+        </ul>
+        <h3>500 Amp Automated Multicell Carbon Pile Battery Load Tester</h3>
+        <ul>
+          <li>Created a software PID controller using current feedback to control stepper motor position and load current.</li>
+          <li>Measured load current and cell voltages with instrumentation amplifiers and a multichannel ADC.</li>
+          <li>Programmed an AVR MCU in C with FSM-based LCD menus and SPI peripherals; implemented a USB-to-UART bridge and Python PC interface.</li>
+        </ul>
+        <h3>75 Watt Programmable Benchtop Power Supply</h3>
+        <ul><li>Designed a synchronous buck converter, preregulator, and parallel linear regulators with programmable voltage/current limiting and STM32 LCD measurement display.</li></ul>
+        <h3>50-ohm 1 MHz Bandwidth Function Generator</h3>
+        <ul><li>Implemented a generic VHDL DDS synthesizer, verified it with testbenches, and interfaced the FPGA output with a DAC and analog low-pass filter.</li></ul>
+        <h3>Additional Projects</h3>
+        <p>Library Management System | Assembly Language Temperature and Humidity Display System | ESP32 Weather and Time Monitor | X-Band Amplitude Modulator and Demodulator | CMOS Folded Cascode Operational Amplifier</p>
+      </section>
+
+      <section>
+        <h2>AREAS OF EXPERTISE</h2>
+        <p>Power Electronics | DSP | VHDL/Verilog | Networking | Instrumentation</p>
+      </section>
+    </main>
+  </body>
+</html>
