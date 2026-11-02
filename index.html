@@ -53,10 +53,17 @@
           </div>
         </div>
         <div class="hero-portrait">
-          <img src="Headshot.jpg" alt="Profile photo of Omar Kalea" class="profile-photo" />
+          <button class="headshot-trigger" type="button" aria-label="Enlarge profile photo">
+            <img src="Headshot.jpg" alt="Profile photo of Omar Kalea" class="profile-photo" />
+          </button>
         </div>
       </div>
     </header>
+
+    <dialog class="headshot-dialog" aria-label="Enlarged profile photo">
+      <button class="headshot-dialog-close" type="button" aria-label="Close enlarged profile photo">×</button>
+      <img src="Headshot.jpg" alt="Enlarged profile photo of Omar Kalea" />
+    </dialog>
 
     <main>
       <section id="about" class="section about-section">
