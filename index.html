@@ -18,8 +18,11 @@
         </button>
         <div class="nav-links">
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
           <a href="Omar_Kalea_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         </div>
         <div class="nav-social" aria-label="Social links">
@@ -62,6 +65,80 @@
           <div class="section-header">
             <h2><span class="section-symbol" aria-hidden="true">&#128100;</span> About Me</h2>
             <p>I am an electrical engineering graduate with a strong foundation in analog and digital circuit design, signal integrity, signal processing, and embedded systems. My professional experience has focused on power electronics and digital hardware, while my personal projects have allowed me to develop software for microcontrollers and firmware for FPGAs. I enjoy tackling unfamiliar problems, working across disciplines, and taking ownership of projects from the initial idea through to a working system.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills-section">
+        <div class="container">
+          <div class="section-header">
+            <h2><span class="section-symbol" aria-hidden="true">&#9881;&#65039;</span> Skills</h2>
+            <p>Skills across circuit design, embedded systems, signal processing, and validation.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Programming & Firmware</h3>
+              <ul class="skills-list">
+                <li>C</li>
+                <li>Embedded C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>AVR/MIPS Assembly</li>
+                <li>MATLAB</li>
+                <li>VHDL</li>
+                <li>Verilog</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Tools & CAD</h3>
+              <ul class="skills-list">
+                <li>Fusion360</li>
+                <li>OrCAD</li>
+                <li>LTspice</li>
+                <li>LTpowerCAD</li>
+                <li>PSpice</li>
+                <li>KiCad</li>
+                <li>Altium</li>
+                <li>Vivado</li>
+                <li>Cadence</li>
+                <li>Wireshark</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Lab & Validation</h3>
+              <ul class="skills-list">
+                <li>Oscilloscope</li>
+                <li>Signal Generator</li>
+                <li>Logic Analyzer</li>
+                <li>Spectrum Analyzer</li>
+                <li>Vector Network Analyzer</li>
+                <li>Multimeter</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section education-section">
+        <div class="container">
+          <div class="section-header">
+            <h2><span class="section-symbol" aria-hidden="true">&#127891;</span> Education</h2>
+            <p>Academic training in electrical engineering with a focus on systems, design, and applied problem solving.</p>
+          </div>
+          <div class="education-card-wrap">
+            <article class="card education-card">
+              <div class="education-media">
+                <img src="stony-brook-logo.svg" alt="Stony Brook University logo" class="education-logo" />
+              </div>
+              <div>
+                <h3 class="education-school">Stony Brook University</h3>
+                <p><strong>Bachelor of Engineering, Electrical Engineering</strong></p>
+                <p>Stony Brook, NY</p>
+                <p>Graduation: May 2025</p>
+                <p>Magna Cum Laude | GPA: 3.8/4.0</p>
+              </div>
+              <img src="graduation-photo.jpg" alt="Omar Kalea at graduation" class="graduation-photo" />
+            </article>
           </div>
         </div>
       </section>
@@ -137,6 +214,26 @@
         </div>
       </section>
     </main>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2><span class="section-symbol" aria-hidden="true">&#9993;&#65039;</span> Contact</h2>
+        </div>
+        <article class="card contact-card">
+          <div class="contact-meta">
+            <p><strong>Phone:</strong> <a href="tel:+19292934875">(929) 293-4875</a></p>
+            <p><strong>Email:</strong> <a href="mailto:omtm25@gmail.com">omtm25@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/omar-kalea/" target="_blank" rel="noreferrer">linkedin.com/in/omar-kalea</a></p>
+          </div>
+          <form id="contactForm" class="contact-form" novalidate>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="Write your message here..." required></textarea>
+            <button type="submit" class="button">Send via Email</button>
+          </form>
+        </article>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container footer-content">
